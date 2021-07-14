@@ -1,16 +1,18 @@
-for(let num = 0;num <15; num++){
+const fizzBuzz = num => {
+    for(let i = 1; i <= num; i++) {
+      // check if the number is a multiple of 3 and 5
+      if(i % 3 === 0 && i % 5 === 0) {
+        console.log('fizzbuzz')
+      } // check if the number is a multiple of 3
+        else if(i % 3 === 0) {
+        console.log('fizz')
+      } // check if the number is a multiple of 5
+        else if(i % 5 === 0) {
+        console.log('buzz')
+      } else {
+        console.log(i)
+      }
+    }
+  }
 
-if (num % 3 == 0 && !(num % 5 == 0)){
-    console.log("fizz");
-
-}
-else if(num % 5 == 0 && !(num % 5 == 0)){
-    console.log("buzz");
-}
-else if(num % 3 == 0 && num % 5 == 0){
-    console.log("divisble by both");
-}
-else {
-    console.log(`${num}`);
-}
-}
+fizzBuzz(15);
